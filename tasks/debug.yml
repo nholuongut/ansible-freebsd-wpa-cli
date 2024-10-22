@@ -1,0 +1,59 @@
+---
+
+- name: Debug
+  vars:
+    msg: |-
+         ansible_architecture [{{ ansible_architecture }}]
+         ansible_os_family [{{ ansible_os_family }}]
+         ansible_distribution [{{ ansible_distribution }}]
+         ansible_distribution_major_version [{{ ansible_distribution_major_version }}]
+         ansible_distribution_version [{{ ansible_distribution_version }}]
+         ansible_distribution_release [{{ ansible_distribution_release }}]
+         ansible_python_version [{{ ansible_python_version }}]
+
+         wpacli_install [{{ wpacli_install }}]
+         wpacli_backup_conf [{{ wpacli_backup_conf }}]
+         wpacli_enable [{{ wpacli_enable }}]
+         wpacli_assert_enable [{{ wpacli_assert_enable }}]
+         wpacli_versions_tested
+         {{ wpacli_versions_tested|to_nice_yaml }}
+         wpacli_packages
+         {{ wpacli_packages|to_nice_yaml }}
+         wpacli_program [{{ wpacli_program }}]
+
+         freebsd_install_method [{{ freebsd_install_method }}]
+         freebsd_use_packages [{{ freebsd_use_packages }}]
+         freebsd_install_retries [{{ freebsd_install_retries }}]
+         freebsd_install_delay [{{ freebsd_install_delay }}]
+
+         wpacli_pid_dir [{{ wpacli_pid_dir }}]
+         wpacli_pid_dir_owner [{{ wpacli_pid_dir_owner }}]
+         wpacli_pid_dir_group [{{ wpacli_pid_dir_group }}]
+         wpacli_pid_dir_mode [{{ wpacli_pid_dir_mode }}]
+
+         wpacli_action_script [{{ wpacli_action_script }}]
+         wpacli_action_script_template [{{ wpacli_action_script_template }}]
+         wpacli_action_script_dir [{{ wpacli_action_script_dir }}]
+         wpacli_action_script_dir_owner [{{ wpacli_action_script_dir_owner }}]
+         wpacli_action_script_dir_group [{{ wpacli_action_script_dir_group }}]
+         wpacli_action_script_dir_mode [{{ wpacli_action_script_dir_mode }}]
+         wpacli_action_script_file [{{ wpacli_action_script_file }}]
+         wpacli_action_script_owner [{{ wpacli_action_script_owner }}]
+         wpacli_action_script_group [{{ wpacli_action_script_group }}]
+         wpacli_action_script_mode [{{ wpacli_action_script_mode }}]
+         wpacli_action_script_log_to_file [{{ wpacli_action_script_log_to_file }}]
+         wpacli_action_script_logfile [{{ wpacli_action_script_logfile }}]
+         wpacli_action_script_ntp_set [{{ wpacli_action_script_ntp_set }}]
+         wpacli_action_script_ntp_server [{{ wpacli_action_script_ntp_server }}]
+         wpacli_action_script_ntpdate_flags [{{ wpacli_action_script_ntpdate_flags }}]
+
+         wpacli_ctrl_interface: [{{ wpacli_ctrl_interface }}]
+         wpacli_rcconf
+         {{ wpacli_rcconf|to_yaml }}
+
+         fp_wpasupplicant_conf_ctrl_interface [{{ fp_wpasupplicant_conf_ctrl_interface|default('UNDEFINED') }}]
+  ansible.builtin.debug:
+    msg: "{{ '{}'.format(msg) }}"
+
+# EOF
+...

@@ -1,0 +1,26 @@
+---
+
+- name: "rc: Create wpa_cli rc script /etc/rc.d/wpa_cli"
+  ansible.builtin.template:
+    src: wpa_cli.j2
+    dest: /etc/rc.d/wpa_cli
+    owner: root
+    group: wheel
+    mode: "0555"
+    backup: "{{ wpacli_backup_conf }}"
+  tags: wpacli_rc_script
+
+- name: "rc: Patch /etc/defaults/rc.conf; add wpa_cli_* default vars"
+  ansible.posix.patch:
+    src: "{{ role_path }}/files/rc.conf.patch"
+    basedir: /etc/defaults
+  tags: wpacli_rc_defaults_patch
+
+- name: "rc: Patch /etc/network.subr, start/stop wpa_cli"
+  ansible.posix.patch:
+    src: "{{ role_path }}/files/network.subr.patch"
+    basedir: /etc
+  tags: wpacli_rc_networksubr_patch
+
+# EOF
+...

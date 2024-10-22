@@ -1,0 +1,13 @@
+---
+
+- name: "rcconf: Configure wpa_cli_* in /etc/rc.conf"
+  ansible.builtin.lineinfile:
+    dest: /etc/rc.conf
+    regexp: '^\s*{{ item.key }}\s*=(.*)$'
+    line: '{{ item.key }}="{{ item.val }}"'
+    backup: "{{ wpacli_backup_conf }}"
+  loop: "{{ wpacli_rcconf }}"
+  notify: restart netif
+
+# EOF
+...

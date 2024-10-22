@@ -1,0 +1,40 @@
+---
+mytemplates: 
+
+  - file: 1.0.0-wpa_action.sh.j2
+    link: 1.0.0-wpa_action.sh.j2
+    path: templates/1.0.0-wpa_action.sh.j2
+    synopsis: |
+      Template 1.0.0-wpa_action.sh.
+    description: |
+      Description of the template.
+    lines: 1
+    seealso: []
+    note: []
+    warning: []
+
+  - file: 1.1.0-wpa_action.sh.j2
+    link: 1.1.0-wpa_action.sh.j2
+    path: templates/1.1.0-wpa_action.sh.j2
+    synopsis: |
+      Template 1.1.0-wpa_action.sh.
+    description: |
+      Description of the template.
+    lines: 1
+    seealso: []
+    note: []
+    warning: []
+
+  - file: wpa_cli.j2
+    link: wpa_cli.j2
+    path: templates/wpa_cli.j2
+    synopsis: |
+      Template wpa_cli.
+    description: |
+      Description of the template.
+    lines: 1
+    seealso: []
+    note: []
+    warning: []
+
+...

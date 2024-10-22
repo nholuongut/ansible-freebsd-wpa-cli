@@ -1,0 +1,24 @@
+---
+galaxy_info:
+  namespace: vbotka
+  role_name: freebsd_wpa_cli
+  author: Vladimir Botka
+  description: FreeBSD. RC system and wpa_cli action_file configure wlan devices.
+  company: https://botka.link
+  github_branch: master
+  license: BSD
+  min_ansible_version: "2.11"
+  platforms:
+    - name: FreeBSD
+      versions:
+        - 12.1
+  galaxy_tags:
+    - freebsd
+    - rc
+    - wpacli
+    - wpasupplicant
+dependencies: []
+collections:
+  - ansible.posix
+  - community.general
+...

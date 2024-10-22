@@ -1,0 +1,93 @@
+---
+mytasks:
+  - file: main.yml
+    link: main.yml
+    path: tasks/main.yml
+    synopsis: |
+      Main task.
+    description: |
+      Import tasks if enabled.
+    lines: 1,2
+    seealso: []
+    note: []
+    warning: []
+
+  - file: assert.yml
+    link: assert.yml
+    path: tasks/assert.yml
+    synopsis: |
+      Configure assert.
+    description: |
+      Description of the task.
+    lines: 1,2
+    seealso: []
+    notes: []
+    hints: []
+    warnings: []
+
+  - file: debug.yml
+    link: debug.yml
+    path: tasks/debug.yml
+    synopsis: |
+      Configure debug.
+    description: |
+      Description of the task.
+    lines: 1,2
+    seealso: []
+    notes: []
+    hints: []
+    warnings: []
+
+  - file: packages.yml
+    link: packages.yml
+    path: tasks/packages.yml
+    synopsis: |
+      Configure packages.
+    description: |
+      Description of the task.
+    lines: 1,2
+    seealso: []
+    notes: []
+    hints: []
+    warnings: []
+
+  - file: rcconf.yml
+    link: rcconf.yml
+    path: tasks/rcconf.yml
+    synopsis: |
+      Configure rcconf.
+    description: |
+      Description of the task.
+    lines: 1,2
+    seealso: []
+    notes: []
+    hints: []
+    warnings: []
+
+  - file: rc.yml
+    link: rc.yml
+    path: tasks/rc.yml
+    synopsis: |
+      Configure rc.
+    description: |
+      Description of the task.
+    lines: 1,2
+    seealso: []
+    notes: []
+    hints: []
+    warnings: []
+
+  - file: wpa-cli.yml
+    link: wpa-cli.yml
+    path: tasks/wpa-cli.yml
+    synopsis: |
+      Configure wpa-cli.
+    description: |
+      Description of the task.
+    lines: 1,2
+    seealso: []
+    notes: []
+    hints: []
+    warnings: []
+
+...
